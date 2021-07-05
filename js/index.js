@@ -18,7 +18,9 @@ const siteContent = {
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "middle-img-src": "img/mid-page-accent.jpg",
+
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "product-h4":"Product",
@@ -59,7 +61,18 @@ ctaButton.innerHTML = 'Get Started'
 let ctaLogo = document.getElementById("cta-img")
 ctaLogo.setAttribute('src', siteContent["cta"]["img-src"])
 
-const mainContent = document.querySelector('main-content')
+const mainContent = document.querySelector('.main-content')
 
-const leftTop = aboveImg.querySelector('h4')
-leftTop.textContent = 'Features'
+const mainContentTitles = mainContent.getElementsByTagName('h4')
+mainContentTitles[0].textContent = 'Features'
+mainContentTitles[1].textContent = 'About'
+mainContentTitles[2].textContent = 'Services'
+mainContentTitles[3].textContent = 'Product'
+mainContentTitles[4].textContent = 'Vision'
+
+const mainContentInfo = mainContent.getElementsByTagName('p')
+mainContentInfo[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+mainContentInfo[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+mainContentInfo[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+mainContentInfo[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+mainContentInfo[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
