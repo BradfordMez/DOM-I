@@ -28,6 +28,8 @@ const siteContent = {
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
+
+
   "contact": {
     "contact-h4" : "Contact",
     "address" : "123 Way 456 Street Somewhere, USA",
@@ -38,6 +40,11 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+
+
+
+
+
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
@@ -76,3 +83,19 @@ mainContentInfo[1].textContent = 'About content elementum magna eros, ac posuere
 mainContentInfo[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 mainContentInfo[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 mainContentInfo[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+
+const infoImg = document.getElementById("middle-img");
+infoImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+const bottomCont = document.querySelector('.contact')
+const contactTitle = bottomCont.querySelector('h4')
+contactTitle.textContent = 'Contact'
+const contactParas = bottomCont.querySelectorAll('p')
+contactParas[0].innerHTML = '123 Way 456 Street Somewhere, USA'
+contactParas[1].innerHTML = '1 (888) 888-8888'
+contactParas[2].innerHTML = 'sales@greatidea.io'
+
+const footer = document.querySelector('footer')
+const footerPara = footer.querySelector('p')
+footerPara.textContent = 'Copyright Great Idea! 2018'
