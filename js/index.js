@@ -18,7 +18,9 @@ const siteContent = {
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "middle-img-src": "img/mid-page-accent.jpg",
+
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "product-h4":"Product",
@@ -26,6 +28,8 @@ const siteContent = {
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
+
+
   "contact": {
     "contact-h4" : "Contact",
     "address" : "123 Way 456 Street Somewhere, USA",
@@ -37,6 +41,61 @@ const siteContent = {
   },
 };
 
+
+
+
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const header = document.querySelector('header')
+const links = header.querySelectorAll('nav a')
+links[0].textContent = 'Services'
+links[1].textContent = 'Product'
+links[2].textContent = 'Vision'
+links[3].textContent = 'Features'
+links[4].textContent = 'About'
+links[5].textContent = 'Contact'
+
+const ctaText = document.querySelector('h1')
+ctaText.textContent = 'DOM Is Awesome'
+
+const ctaButton = document.querySelector('button')
+ctaButton.innerHTML = 'Get Started'
+
+let ctaLogo = document.getElementById("cta-img")
+ctaLogo.setAttribute('src', siteContent["cta"]["img-src"])
+
+const mainContent = document.querySelector('.main-content')
+
+const mainContentTitles = mainContent.getElementsByTagName('h4')
+mainContentTitles[0].textContent = 'Features'
+mainContentTitles[1].textContent = 'About'
+mainContentTitles[2].textContent = 'Services'
+mainContentTitles[3].textContent = 'Product'
+mainContentTitles[4].textContent = 'Vision'
+
+const mainContentInfo = mainContent.getElementsByTagName('p')
+mainContentInfo[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+mainContentInfo[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+mainContentInfo[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+mainContentInfo[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+mainContentInfo[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+
+const infoImg = document.getElementById("middle-img");
+infoImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+const bottomCont = document.querySelector('.contact')
+const contactTitle = bottomCont.querySelector('h4')
+contactTitle.textContent = 'Contact'
+const contactParas = bottomCont.querySelectorAll('p')
+contactParas[0].innerHTML = '123 Way 456 Street Somewhere, USA'
+contactParas[1].innerHTML = '1 (888) 888-8888'
+contactParas[2].innerHTML = 'sales@greatidea.io'
+
+const footer = document.querySelector('footer')
+const footerPara = footer.querySelector('p')
+footerPara.textContent = 'Copyright Great Idea! 2018'
