@@ -50,4 +50,16 @@ links[3].textContent = 'Features'
 links[4].textContent = 'About'
 links[5].textContent = 'Contact'
 
-const cta = document.querySelector('cta')
+const ctaText = document.querySelector('h1')
+ctaText.textContent = 'DOM Is Awesome'
+
+const ctaButton = document.querySelector('button')
+ctaButton.innerHTML = 'Get Started'
+
+let ctaLogo = document.getElementById("cta-img")
+ctaLogo.setAttribute('src', siteContent["cta"]["img-src"])
+
+const mainContent = document.querySelector('main-content')
+
+const leftTop = aboveImg.querySelector('h4')
+leftTop.textContent = 'Features'
